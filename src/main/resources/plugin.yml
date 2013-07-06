@@ -1,0 +1,4 @@
+name: bs-servers
+main: net.robbytu.banjoserver.servers.Main
+version: ${version}
+depend: [bs-framework]
