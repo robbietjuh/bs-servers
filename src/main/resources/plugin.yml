@@ -2,3 +2,8 @@ name: bs-servers
 main: net.robbytu.banjoserver.servers.Main
 version: ${version}
 depend: [bs-framework]
+commands:
+    server:
+        description: Switch servers
+        permission:
+        usage: /server [name]
