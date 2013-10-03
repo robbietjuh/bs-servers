@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="bs-shops:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/bs_shops_jar</output-path>
+    <root id="archive" name="bs-shops.jar">
+      <element id="module-output" name="bs-shops" />
+      <element id="dir-copy" path="$PROJECT_DIR$/../bs-shops/src/main/resources" />
+    </root>
+  </artifact>
+</component>
