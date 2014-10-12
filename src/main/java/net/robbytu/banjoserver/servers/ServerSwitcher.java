@@ -7,7 +7,7 @@ import org.bukkit.entity.Player;
 
 public class ServerSwitcher {
     static void switchTo(Player p, String server) {
-        p.sendMessage(ChatColor.GRAY + " * Verbinden met " + server + " server...");
+        p.sendMessage(ChatColor.GRAY + " * Verbinden met " + server + "...");
 
         ByteArrayDataOutput out = ByteStreams.newDataOutput();
 

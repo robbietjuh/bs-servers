@@ -7,3 +7,7 @@ commands:
         description: Switch servers
         permission:
         usage: /server [name]
+    warp:
+        description: Switch servers
+        permission:
+        usage: /warp [name]
