@@ -2,7 +2,6 @@ package net.robbytu.banjoserver.servers;
 
 import net.robbytu.banjoserver.framework.api.SwitchAPI;
 import net.robbytu.banjoserver.framework.interfaces.Switch;
-import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -59,7 +58,9 @@ public class CommandHandler implements CommandExecutor {
         Switch[] switches = SwitchAPI.getSwitches();
         for(int i = 0; i < switches.length; i ++) {
             Switch switchObj = switches[i];
-            if(switchObj.type == 1) menu.setOption(i, new ItemStack(switchObj.switchMaterial, 1), switchObj.serverName, switchObj.switchDescription, ChatColor.GRAY + "" + switchObj.server.serverPlayers + " online");
+            if(switchObj.type == 1) {
+                menu.setOption(i, new ItemStack(switchObj.switchMaterial, (switchObj.server.serverPlayers == 0) ? 1 : switchObj.server.serverPlayers), switchObj.serverName, (switchObj.switchDescription.replace("%online", switchObj.server.serverPlayers + "")).split("\n"));
+            }
         }
 
         // Show the menu
